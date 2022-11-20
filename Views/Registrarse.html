@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-default">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+</head>
+<body class="w-50 mx-auto rounded mt-3">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue-dark rounded-top pt-1 pb-0">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="../Images/Logo.png" alt="Logo" class="w-100">
+                        </div>
+                        <div class="col-12 text-center">
+                            <h5 class="text-blue fs-6">Gestión de paquetes</h5>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </nav>
+    <section class="bg-white rounded-bottom p-3">
+        <div class="container px-5">
+            <h2 class="text-blue-dark text-center fs-3">REGISTRO DE USUARIO</h2>
+            <form class="px-5">
+                <div class="mb-3">
+                    <label for="exampleInputTipoIndenUsuario" class="form-label">Tipo de identificación del usuario:<span style="color: #FF0000">*</span></label>
+                    <select name="exampleInputTipoIndenUsuario" id="ctl00_ContentPlaceHolder1_dpexampleInputValidator1" class="form-control" required="">
+                        <option value="">Seleccione</option>
+                        <option value="C">Cedula de ciudadania</option>
+                        <option value="CD">Carnet diplomatico</option>
+                        <option value="E">Cedula de extranjeria</option>
+                        <option value="N">Nit</option>
+                        <option value="P">Pasaporte</option>
+                        <option value="PE">Permiso especial de permanencia</option>
+                        <option value="PT">Permiso por proteccion temporal</option>                       
+                    </select>
+                </div>
+                    <div class="mb-1">
+                        <label for="exampleInputNunIdenUsuario" class="form-label">Número Identificación del usuario:<span style="color: #FF0000">*</span></label>
+                        <input type="number" class="form-control" id="exampleInputValidator2" required="">
+                        <small>
+                            <span id="ctl00_ContentPlaceHolder1_MsjDoc" style="color:#666666;">Sin puntos ni caracteres especiales</span>
+                        </small>
+                    </div>
+                <div class="mb-1">
+                    <label for="exampleInputCorreoElectronico" class="form-label">Correo electrónico:<span style="color: #FF0000">*</span></label>
+                    <input type="text" class="form-control" id="exampleInputValidator3" required="">
+                </div>
+                <div class="mb-1">
+                    <label for="exampleConfirCorreoElect" class="form-label">Confirmación correo electrónico:<span style="color: #FF0000">*</span></label>
+                    <input type="text" class="form-control" id="exampleInputValidator4" required="">
+                    <span id="exampleInputValidator5" style="color:#DF0101;display:none;">Correo confirmación no coincide</span>
+                </div>
+                <div class="mb-1">                
+                    <label for="exampleConfirCorreoElect" class="form-label">Clave:<span style="color: #FF0000">*</span></label>
+                    <img src="../images/question.png" id="ctl00_ContentPlaceHolder1_img2" onmouseover="Hilite(this)" onmouseout="Hilite(this, false)" style="cursor: pointer; background-color: white;" title="La clave debe tener mínimo 8 caracteres y contener al menos una letra mayúscula y un número">
+                    <input type="password" class="form-control" id="exampleInputValidator6" maxlength="18" required="">     
+                </div>
+                <div class="mb-3">
+                    <div class="form-group has-error">    
+                    <label for="exampleConfirCorreoElect" class="form-label">Confirmación clave:<span style="color: #FF0000">*</span></label>
+                    <input type="password" class="form-control" id="exampleInputValidator7" maxlength="18" required="">
+                    <span id="exampleInputValidator8" style="color:#DF0101;display:none;">Confirmación clave no coincide</span>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <button type="submit" class="btn btn-primary w-50">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
